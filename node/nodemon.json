@@ -1,0 +1,9 @@
+{
+  "env" : {
+    "JWT_SECRET" : "encryptstring",
+    "MYSQL_HOST" : "127.0.0.1",
+    "MYSQL_USERNAME" : "root",
+    "MYSQL_PASSWORD" : "Ecosmob@123",
+    "MYSQL_DB" : "stripe_integration"
+  }
+}
