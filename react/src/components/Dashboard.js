@@ -9,7 +9,8 @@ import {
     productUnlike,
     storeProductsCookie
 } from "./products/ProductConfig";
-import {Cart} from "./products/Cart";
+
+import {CartPopup} from "./products/CartPopup";
 import {useSelector} from "react-redux";
 
 export const Dashboard = () => {
@@ -64,7 +65,7 @@ export const Dashboard = () => {
                 ))}
                 {products.length === 0 && <NoData>No Products Found</NoData>}
             </div>
-            {cartShow && <Cart />}
+            {cartShow && <CartPopup />}
         </div>
     </>
 }

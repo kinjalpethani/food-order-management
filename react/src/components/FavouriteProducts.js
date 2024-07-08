@@ -1,18 +1,16 @@
 import {CommonTab} from "./layouts/CommonTab";
 import {useEffect, useState} from "react";
-import Cookies from "js-cookie";
-import {Base64} from "js-base64";
 import {ProductCommonPage} from "./products/ProductCommonPage";
 import {NoData} from "./products/NoData";
 import {
     fetchFavouriteProducts,
     getFavProductFromCookie,
-    getFavProductFromDB, productUnlike,
+    productUnlike,
     storeProductsCookie,
 } from './products/ProductConfig';
 import {getToken} from "../helpers/config";
 import {useSelector} from "react-redux";
-import {Cart} from "./products/Cart";
+import {CartPopup} from "./products/CartPopup";
 
 export const FavouriteProducts = () => {
     const [products, setProducts] = useState([]);
@@ -53,7 +51,7 @@ export const FavouriteProducts = () => {
                             ))}
                             {products.length === 0 && <NoData>No Products Found</NoData>}
                         </div>
-                        {cartShow && <Cart />}
+                        {cartShow && <CartPopup />}
                     </div>
                 </div>
             </div>

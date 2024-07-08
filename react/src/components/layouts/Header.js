@@ -7,7 +7,7 @@ const Header = () => {
         <div className="navbar navbar-expand-md navbar-light">
             <div className="navbar-brand">
                 <NavLink to="/" className="d-inline-block">
-                    <Logo />
+                    <Logo/>
                 </NavLink>
             </div>
 
@@ -22,23 +22,15 @@ const Header = () => {
                     <div className="col-lg-12">
                         <input type="search" className="form-control border-radius typeahead-basic"
                                placeholder="Search for Products"/>
-                            <div className="form-control-feedback form-control-feedback-lg">
-                                <i className="icon-search4 text-muted"></i>
-                            </div>
+                        <div className="form-control-feedback form-control-feedback-lg">
+                            <i className="icon-search4 text-muted"></i>
+                        </div>
                     </div>
                 </div>
-                <ul className="navbar-nav">
-                    <NavLink to="/">
-                        <li className="nav-item">
-                            <img src="/assets/images/cart.png" className="pt-2" alt="" />
-                                <span className="badge badge-pill ml-auto ml-md-0">2</span>
-                        </li>
-                    </NavLink>
-                    <CommonHeader />
-                </ul>
+               <CommonHeader/>
             </div>
         </div>
     </>
 }
 
-export  default Header;
+export default Header;

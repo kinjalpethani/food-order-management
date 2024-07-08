@@ -43,3 +43,17 @@ export const productLike = async (productId) => {
         productId
     }));
 }
+
+export const getCartProductFromCookie = () => {
+    let cartProductArray = Cookies.get('cartProducts') || [];
+    if (cartProductArray.length > 0) {
+        cartProductArray = JSON.parse(Base64.decode(cartProductArray));
+    }
+    return cartProductArray;
+}
+
+export const fetchCartProducts = async (setProducts, productIds) => {
+    const {http} = Config();
+    const response = await http.post('/cart/products/list', productIds);
+    setProducts(response.data.products);
+}

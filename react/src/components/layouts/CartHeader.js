@@ -26,15 +26,7 @@ export const CartHeader = () => {
                         </NavLink>
                     </div>
                 </div>
-                <ul className="navbar-nav">
-                    <NavLink to="{{ route('cartList">
-                        <li className="nav-item position-relative">
-                            <img src="/assets/images/cart.png" className="pt-1" alt=""/>
-                            <span className="badge badge-pill ml-auto ml-md-0 cart_count">0</span>
-                        </li>
-                    </NavLink>
-                    <CommonHeader/>
-                </ul>
+                <CommonHeader/>
             </div>
         </div>
     </>

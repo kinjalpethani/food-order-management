@@ -10,6 +10,7 @@ import {action as LogoutAction} from "../components/Logout";
 import {LoginLayout} from "../components/layouts/LoginLayout";
 import {Register} from "../components/register/Register";
 import {AuthTokenLoader} from "../helpers/config";
+import {Cart} from "../components/Cart";
 
 const Routing = createBrowserRouter([
     {
@@ -23,6 +24,7 @@ const Routing = createBrowserRouter([
             {path: '/profile', element: <Profile/>},
             {path: '/history', element: <TransactionHistory/>},
             {path: '/favourite', element: <FavouriteProducts/>},
+            {path: '/cart', element: <Cart/>},
             {path: '/logout', action: LogoutAction},
         ],
     },
